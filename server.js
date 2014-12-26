@@ -4,7 +4,7 @@ var express           = require('express'),
     mongoose          = require('mongoose'),
     challengesController = require('./server/controllers/challenges-controller');
 
-mongoose.connect('mongodb://localhost:27017/mean-demo');
+mongoose.connect('mongodb://localhost:27017/challenges');
 
 app.use(bodyParser());
 
