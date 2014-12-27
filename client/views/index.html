@@ -6,35 +6,40 @@
       <title></title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="/css/challenges.css" rel="stylesheet">
   </head>
   <body>
 
       <!-- Meetups View -->
       <div ng-controller="challengesController">
-        <h1>There are {{challenges.length}} Challenges</h1>
-        <form ng-submit="createChallenge()">
-          <input type="text" placeholder="challenge name" ng-model="challengeName"></input>
-          <input type="text" placeholder="challenge description" ng-model="challengeDescription"></input>
-          <button type="submit">Add</button>
-        </form>
+      <div class="background">
+        <div class="challengesList">
+          <h3>{{challenges.length}} Challenges</h3>
+          <form ng-submit="createChallenge()">
+            <input type="text" placeholder="challenge name" ng-model="challengeName"></input>
+            <input type="text" placeholder="challenge description" ng-model="challengeDescription"></input>
+            <button type="submit">Add</button>
+          </form>
 
-        <ul>
-          <li ng-repeat="challenge in challenges" ng-click="setChallenge(challenge)">
-            {{challenge.name}}
-          </li>
-        </ul>
-        
-        <div class="challengeData">
-        <h1 class="challengeName">{{challenge.name}}</h1>
-        <p class="challengeDesc">{{challenge.description}}</p>  
-        </div> 
+          <ul>
+            <li ng-repeat="challenge in challenges" ng-click="setChallenge(challenge)">
+              {{challenge.name}}
+            </li>
+          </ul>
+        </div>
+        <div class="writingBackground">
+          <div class="challengeData">
+            <h1 class="challengeName">{{challenge.name}}</h1>
+            <p class="challengeDesc">{{challenge.description}}</p>  
+          </div> 
+        </div>
+      </div>  
       </div>
 
 
 
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
-
       <script type="text/javascript" src="/js/app.js"></script>
       <script type="text/javascript" src="/js/controllers/challenges-controller.js"></script>
   </body>

@@ -1,0 +1,35 @@
+body {
+	background-color: #333;
+}
+
+
+.challengesList {
+	float: left;
+	width: 300px;
+	background-color: #666;
+	padding: 20px;
+}
+
+.challengesList li {
+	height: 40px;
+	padding: 10px;
+	background-color: #FFF;
+	list-style-type: none;
+    border-bottom: 1px solid; #ff0000;
+}
+
+
+
+.challengeData {
+	margin-top: 40px;
+	margin-left: auto ;
+	margin-right: auto ;
+	width: 600px;
+	height: 600px;
+	background-color: #FFF;	
+	padding: 40px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+}
