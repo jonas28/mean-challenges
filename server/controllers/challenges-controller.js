@@ -12,3 +12,21 @@ module.exports.list = function (req, res) {
     res.json(results);
   });
 }
+
+module.exports.show = function (req, res) {
+  Challenge.findById(req.params.id, function (err, results) {
+    res.json(results);
+  });
+}
+
+
+
+module.exports.update = function (req, res) {  
+  return Challenge.findById(req.params.id, function (err, challenge) {
+    challenge.name = req.body.name;
+    challenge.description = req.body.description;
+    challenge.save(function (err, result) {
+      res.json(result);
+    });
+  });
+}

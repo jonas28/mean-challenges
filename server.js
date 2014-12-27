@@ -17,6 +17,8 @@ app.use('/css', express.static(__dirname + '/client/css'));
 
 //REST API
 app.get('/api/challenges', challengesController.list);
+app.get('/api/challenges/:id', challengesController.show);
+app.put('/api/challenges/:id', challengesController.update);
 app.post('/api/challenges', challengesController.create);
 
 app.listen(3000, function() {

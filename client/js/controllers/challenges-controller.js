@@ -11,13 +11,22 @@ app.controller('challengesController', ['$scope', '$resource', function ($scope,
   $scope.createChallenge = function () {
     var challenge = new Challenge();
     challenge.name = $scope.challengeName;
-    challenge.description = $scope.challengeDescription;
     challenge.$save(function (result) {
       $scope.challenges.push(result);
       $scope.challengeName = '';
-      $scope.challengeDescription = '';
     });
   };
+
+  $scope.updateChallenge = function (id) { 
+    challenge = id;
+    challenge.description = $scope.challengeDescription;
+    challenge.$save(function (result) {
+      $scope.updateChallenge.push(result);
+    });
+  };
+
+
+  
 
   $scope.setChallenge = function(challenge){
     $scope.challenge = challenge;
