@@ -7,6 +7,7 @@ app.controller('challengesController', ['$scope', '$resource', function ($scope,
 
   $scope.challenges = []
 
+
   $scope.createChallenge = function () {
     var challenge = new Challenge();
     challenge.name = $scope.challengeName;
@@ -16,5 +17,10 @@ app.controller('challengesController', ['$scope', '$resource', function ($scope,
       $scope.challengeName = '';
       $scope.challengeDescription = '';
     });
+  };
+
+  $scope.setChallenge = function(challenge){
+    $scope.challenge = challenge;
   }
+
 }]);
